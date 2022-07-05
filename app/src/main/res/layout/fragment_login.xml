@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_login"
+    tools:context=".LoginFragment">
+
+    <ImageView
+        android:id="@+id/imageTeam"
+        android:layout_width="108dp"
+        android:layout_height="112dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/team"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120dp"/>
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/gentiumbookplus_regular"
+        tools:text="Hola Usuario!"/>
+    <EditText
+        android:id="@+id/etCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:hint="Código"
+        android:textColorHint="@color/button_color"
+        android:inputType="number"
+        android:maxLength="10"
+        style="@style/etLogin_style"
+        />
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:hint="Contraseña"
+        android:textColorHint="@color/button_color"
+        android:inputType="textPassword"
+        style="@style/etLogin_style"
+        />
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Autenticarse"
+        android:layout_marginTop="10dp"
+        style="@style/main_buttons"/>
+
+</LinearLayout>

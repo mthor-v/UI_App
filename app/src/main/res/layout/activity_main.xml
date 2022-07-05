@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_graph" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/etCode"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="60dp"-->
+<!--        android:layout_marginTop="244dp"-->
+<!--        android:autofillHints="username"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="numberSigned"-->
+<!--        android:minHeight="48dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.502"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/etPassword"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="60dp"-->
+<!--        android:layout_marginBottom="316dp"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:minHeight="48dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.502"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/etCode"-->
+<!--        app:layout_constraintVertical_bias="0.454" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvCode"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fontFamily="@font/kdam_thmor_pro"-->
+<!--        android:text="@string/username"-->
+<!--        android:textColor="#D9D9D2"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/etCode"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.212"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvPassword"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:fontFamily="@font/kdam_thmor_pro"-->
+<!--        android:text="@string/password"-->
+<!--        android:textColor="#D9D9D2"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/etPassword"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.239"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/etCode"-->
+<!--        app:layout_constraintVertical_bias="0.888" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnLogin"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="@color/button_color"-->
+<!--        android:text="Ingresar"-->
+<!--        android:textColor="@color/button_font"-->
+<!--        android:textSize="18sp"-->
+<!--        android:fontFamily="@font/kdam_thmor_pro"-->
+<!--        android:textAllCaps="false"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/etPassword"-->
+<!--        app:layout_constraintVertical_bias="0.028" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageTeam"-->
+<!--        android:layout_width="108dp"-->
+<!--        android:layout_height="112dp"-->
+<!--        android:contentDescription="@string/app_name"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/etCode"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.72"-->
+<!--        app:srcCompat="@drawable/team" />-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:flow_horizontalAlign="center"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.48"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.64">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageNewUser"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:contentDescription="@string/app_name"-->
+<!--            app:srcCompat="@drawable/icons_add_user64"-->
+<!--            tools:layout_editor_absoluteX="142dp"-->
+<!--            tools:layout_editor_absoluteY="526dp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvNewUser"-->
+<!--            style="@style/link_format"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="@string/newUser"-->
+<!--            android:textColor="@color/link_color1"-->
+<!--            tools:layout_editor_absoluteX="172dp"-->
+<!--            tools:layout_editor_absoluteY="526dp" />-->
+<!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
