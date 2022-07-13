@@ -17,8 +17,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeBinding.bind(view)
-
+        binding.btnFormCreate.setOnClickListener { goToCreate() }
         binding.btnLogout.setOnClickListener { logout() }
+    }
+
+    private fun goToCreate() {
+        findNavController().navigate(R.id.action_homeFragment_to_formByCiaFragment)
     }
 
     private fun logout() {

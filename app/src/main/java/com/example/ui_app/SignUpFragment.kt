@@ -67,9 +67,9 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
                 override fun onResponse(
                     call: Call<TokenResponseDTO>,
                     response: Response<TokenResponseDTO>
-                ) {
-                    val rsp: TokenResponseDTO? = response.body()
-                    if(rsp != null){
+                ) { val cod: Int = response.code()
+                    if(cod == 200){
+                        val rsp: TokenResponseDTO? = response.body()
                         val gson = Gson()
                         val jsonString = gson.toJson(rsp)
                         val obj = JSONObject(jsonString)
@@ -78,12 +78,13 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
                         prefs.saveRefreshToken(obj.getString("refresh"))
                         showAlert(prefs.getAccessToken())
                         findNavController().navigate(R.id.action_signUpFragment_to_homeFragment)
-                    }else{
-                        showAlert("Null response")
+                    }else if(cod == 400){
+                        showAlert(response.message() + ": Código o Email ya están registrados")
                     }
                 }
                 override fun onFailure(call: Call<TokenResponseDTO>, t: Throwable) {
-                    showAlert(t.toString())
+                    showAlert("Ha ocurrido un error")
+                    println(t.toString())
                 }
             }
         )

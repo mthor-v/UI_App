@@ -55,8 +55,9 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                     call: Call<TokenResponseDTO>,
                     response: Response<TokenResponseDTO>
                 ) {
-                    val rsp: TokenResponseDTO? = response.body()
-                    if(rsp != null){
+                    val cod: Int = response.code()
+                    if(cod == 200){
+                        val rsp: TokenResponseDTO? = response.body()
                         val gson = Gson()
                         val jsonString = gson.toJson(rsp)
                         val obj = JSONObject(jsonString)
@@ -65,12 +66,14 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                         prefs.saveRefreshToken(obj.getString("refresh"))
                         showAlert(prefs.getAccessToken())
                         findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
-                    }else{
-                        showAlert("Credenciales Incorrectas")
+                    }else if (cod == 401){
+                        val msg: String = response.message()
+                        showAlert(msg)
                     }
                 }
                 override fun onFailure(call: Call<TokenResponseDTO>, t: Throwable) {
-                    showAlert(t.toString())
+                    showAlert("Ha ocurrido un problema")
+                    println(t.toString())
                 }
             }
         )

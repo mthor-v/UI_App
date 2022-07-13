@@ -58,14 +58,19 @@
         <item name="android:textSize">22sp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textColor">#08313A</item>
-        <item name="android:layout_marginHorizontal">70dp</item>
+        <item name="android:layout_marginLeft">70dp</item>
+        <item name="android:layout_marginRight">70dp</item>
         <item name="android:textColorHint">@color/button_color</item>
         <item name="fontFamily">@font/titilliumweb_regular</item>
     </style>
     <style name="home_button">
-        <item name="android:layout_marginHorizontal">45dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
         <item name="textAllCaps">false</item>
         <item name="android:fontFamily">@font/kdam_thmor_pro</item>
         <item name="android:textSize">21sp</item>
+        <item name="android:textAlignment">textStart</item>
     </style>
 </resources>

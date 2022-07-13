@@ -43,5 +43,13 @@
         <action
             android:id="@+id/action_homeFragment_to_welcomeFragment"
             app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_formByCiaFragment"
+            app:destination="@id/formByCiaFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/formByCiaFragment"
+        android:name="com.example.ui_app.FormByCiaFragment"
+        android:label="fragment_form_by_cia"
+        tools:layout="@layout/fragment_form_by_cia" />
 </navigation>

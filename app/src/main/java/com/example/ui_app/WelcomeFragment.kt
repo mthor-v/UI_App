@@ -43,6 +43,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
                     response: Response<UserResponseDTO>
                 ) {
                     val rsp: UserResponseDTO? = response.body()
+                    println(response.code())
                     if(rsp != null){
                         val gson = Gson()
                         val jsonString = gson.toJson(rsp)
@@ -55,6 +56,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
                 }
                 override fun onFailure(call: Call<UserResponseDTO>, t: Throwable) {
                     showAlert(t.toString())
+                    println(t.toString())
                 }
             }
         )
