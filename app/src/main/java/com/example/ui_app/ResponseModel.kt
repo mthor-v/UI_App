@@ -4,16 +4,16 @@ class ResponseModel {
 
 }
 
-class TokenResponseDTO(
+data class TokenResponseDTO(
     val refresh: String?,
     val access: String?
 )
 
-class CredentialsDTO(
+data class CredentialsDTO(
     val code: Int?, val password: String?
 )
 
-class UserResponseDTO(
+data class UserResponseDTO(
     val code: Int,
     val name: String,
     val surname: String,
@@ -31,3 +31,16 @@ data class DataSignupDTO(
     val phone: Int,
     val role: String
 )
+
+data class DataManagerDTO(
+    val name: String,
+    val surname: String,
+    val email: String,
+    val academic_level: String
+)
+
+data class ManagerIdDTO(val id:Int)
+
+data class RefreshTokenDTO(val refresh: String?)
+
+data class AccessTokenResponseDTO(val access: String?)

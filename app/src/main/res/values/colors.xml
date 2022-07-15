@@ -13,4 +13,7 @@
     <color name="link_color1">#879D2B</color>
     <color name="link_color2">#7EF7FF</color>
     <color name="input_color">#D8DAD6</color>
+
+    <color name="background_format">#05445E</color>
+    <color name="message_color">#D4F1F4</color>
 </resources>

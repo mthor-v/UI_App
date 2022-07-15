@@ -51,5 +51,23 @@
         android:id="@+id/formByCiaFragment"
         android:name="com.example.ui_app.FormByCiaFragment"
         android:label="fragment_form_by_cia"
-        tools:layout="@layout/fragment_form_by_cia" />
+        tools:layout="@layout/fragment_form_by_cia" >
+        <action
+            android:id="@+id/action_formByCiaFragment_to_managerFragment"
+            app:destination="@id/managerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/managerFragment"
+        android:name="com.example.ui_app.ManagerFragment"
+        android:label="fragment_manager"
+        tools:layout="@layout/fragment_manager" >
+        <action
+            android:id="@+id/action_managerFragment_to_mainDataFragment"
+            app:destination="@id/mainDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainDataFragment"
+        android:name="com.example.ui_app.MainDataFragment"
+        android:label="fragment_main_data"
+        tools:layout="@layout/fragment_main_data" />
 </navigation>

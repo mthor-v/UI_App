@@ -5,4 +5,6 @@
     <string name="newUser">Nuevo Usuario</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="boss_header">Llene el formulario con la información suministrada por el empresario</string>
 </resources>

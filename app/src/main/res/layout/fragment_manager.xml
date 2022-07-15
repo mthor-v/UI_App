@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_format"
+    android:gravity="center_horizontal"
     tools:context=".ManagerFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="@string/boss_header"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/message_color"
+        android:gravity="center_horizontal"/>
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/etBossName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nombre"
+        style="@style/etSignUp_style"/>
+
+    <EditText
+        android:id="@+id/etBossSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Apellido"
+        style="@style/etSignUp_style"/>
+
+    <EditText
+        android:id="@+id/etBossEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        style="@style/etSignUp_style"/>
+
+    <Button
+        android:id="@+id/btnBossEducation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nivel Educativo"
+        android:layout_marginHorizontal="70dp"/>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar" />
+
+</LinearLayout>

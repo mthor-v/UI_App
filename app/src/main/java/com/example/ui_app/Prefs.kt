@@ -7,6 +7,7 @@ class Prefs(context: Context) {
     val SHARED_NAME = "MyDB"
     val SHARED_ACCESS = "Access"
     val SHARED_REFRESH = "Refresh"
+    val SHARED_MANAGER_ID = "id"
     val storage = context.getSharedPreferences(SHARED_NAME,0)
 
     fun saveAccessToken(accessT:String){
@@ -21,6 +22,14 @@ class Prefs(context: Context) {
     fun getRefreshToken():String{
         return storage.getString(SHARED_REFRESH,"")!!
     }
+//    fun saveIdManager(idBoss:Int){
+//        storage.edit().putInt(SHARED_MANAGER_ID, idBoss).apply()
+//    }
+//    fun getIdManager():Int{
+//        return storage.getInt(SHARED_MANAGER_ID,0)
+//    }
+
+
     fun wipe(){
         storage.edit().clear().apply()
     }
